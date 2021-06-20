@@ -40,7 +40,7 @@ class LogIn : AppCompatActivity() {
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks (){
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
                 signInWithPhoneAuthCredential(p0)
-                startActivity(Intent(this@LogIn , MainActivity::class.java))
+//                startActivity(Intent(this@LogIn , MainActivity::class.java))
             }
 
             override fun onVerificationFailed(p0: FirebaseException) {
@@ -88,14 +88,14 @@ class LogIn : AppCompatActivity() {
         auth.signInWithCredential(p0).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 val user = task.result?.user
-                startActivity(Intent(this , ))
+                startActivity(Intent(this ,set_profile::class.java ))
             }
         }
     }
 
 
     private fun startPhoneVerification(phonenumber:String){
-        val options = PhoneAuthOptions.newBuilder(auth).setPhoneNumber(phonenumber).setTimeout(60L , TimeUnit.SECONDS).setActivity(this).build()
+        val options = PhoneAuthOptions.newBuilder(auth).setPhoneNumber(phonenumber).setTimeout(60L , TimeUnit.SECONDS).setActivity(this).setCallbacks(callbacks).build()
         PhoneAuthProvider.verifyPhoneNumber(options)
 
     }

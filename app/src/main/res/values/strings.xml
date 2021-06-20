@@ -5,4 +5,5 @@
     <string name="entre_otp">Entre OTP</string>
     <string name="get_otp">Get OTP</string>
     <string name="verify_otp">Verify OTP</string>
+    <string name="name">Name</string>
 </resources>
