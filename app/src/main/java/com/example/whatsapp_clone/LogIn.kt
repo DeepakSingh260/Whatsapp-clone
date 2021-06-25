@@ -67,9 +67,9 @@ class LogIn : AppCompatActivity() {
 
                val phone  = entreNo.text
 
-               enterOTPTEXT.visibility = View.INVISIBLE
-               enterOTPTEXT.visibility = View.INVISIBLE
-               enterOTPTEXT.visibility = View.INVISIBLE
+               enterOTPTEXT.visibility = View.VISIBLE
+               verify_opt.visibility = View.VISIBLE
+               entreOTP.visibility = View.VISIBLE
                startPhoneVerification(phone.toString())
            }
        })
