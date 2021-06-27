@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/icon_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.Whatsappclone">
-        <activity android:name=".set_profile"></activity>
-        <activity android:name=".LogIn" />
-        <activity android:name=".splash_screen">
+        <activity android:name=".set_profile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LogIn" />
+        <activity android:name=".splash_screen">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
